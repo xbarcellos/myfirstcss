@@ -1,0 +1,52 @@
+#nav
+{
+	float:right;
+}
+#nav a:hover
+{
+background-color: lightblue;
+text-decoration: underline
+}
+#page
+{
+background-color: lightgray;
+}
+#logolink
+{
+	float: left;
+	color: black
+}
+#content
+{
+	box-shadow: 1px 1px gray;
+	margin: auto;
+	background-color:white;
+	border: 3px white;
+	width: 50%;
+	right: 50px;
+	left: 50px;
+	padding: 10px;
+	clear:both
+ }
+
+li {
+	float: right;
+	box-shadow: 1px 1px gray;
+	display:inline-block;
+	text-align: center;
+	color: white;
+	background-color: blue;
+	position:float;
+    width: 50px;
+    border: 3px solid blue;
+    padding: 5px;
+	top: 5px}
+	
+a {
+	color: white;
+	text-decoration:none;
+}
+#footer
+{
+text-align: right;
+}
