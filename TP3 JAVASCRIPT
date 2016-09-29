@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<script>
+		function validaCampos () {
+		var nome = document.getElementById('nome').value;
+		var senha1 = document.getElementById('senha').value;
+		var senha2 = document.getElementById('senhaConfirmacao').value;
+		var cpf = document.getElementById('cpf').value;
+		var email = document.getElementById('email').value;
+		
+		if (nome === "");
+		alert("Favor escreva seu nome");
+		if (senha1 === senha2);
+		else alert("Digite nos 2 campos de senha valores iguais");
+		
+		}
+	</script>
+	<title>Cadastro de Cliente
+	</title>
+</head>
+<body>
+	<form action="#" method="post" id="formularioCadastro" onsubmit="#">
+		<label for="nome">Nome do Cliente:</label>
+		<input name="nome" id="nome" type="text"><br/>
+		<label for="cpf">CPF:</label>
+		<input name="cpf" id="cpf" type="text"></br>
+		<label for="email">Email:</label>
+		<input name="email" id="email" type="text"></br>
+		<label for="senha">Senha:</label>
+		<input name="senha" id="senha" type="password"></br>
+		<label for="senhaConfirmacao">Confirme sua senha:</label>
+		<input name="senhaConfirmacao" id="senhaConfirmacao" type="password"></br>
+		<input type="submit" value="Cadastrar"/>
+	</form>
+</body>
+</hmtl>
