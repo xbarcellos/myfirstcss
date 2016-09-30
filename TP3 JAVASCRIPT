@@ -1,18 +1,40 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
+	<meta charset="utf-8">
 	<script>
-		function validaCampos () {
+		function validaCampos (evt) {
+		evt.preventDefault();
 		var nome = document.getElementById('nome').value;
 		var senha1 = document.getElementById('senha').value;
 		var senha2 = document.getElementById('senhaConfirmacao').value;
 		var cpf = document.getElementById('cpf').value;
 		var email = document.getElementById('email').value;
 		
-		if (nome === "");
-		alert("Favor escreva seu nome");
-		if (senha1 === senha2);
-		else alert("Digite nos 2 campos de senha valores iguais");
+		var mensagens = [];
+		
+		if (nome == ""){
+		mensagens.push("Insira um nome");
+		}
+		if (cpf == ""){
+		mensagens.push("Insira o CPF");
+		}
+		
+		if(mensagens.length){
+			var notifica = "Seu formulário possui erros:\n\n";
+				for (var i = 0; i < mensagens.length; i++){
+					var m = mensagens[i];
+					notifica += '- ' + m
+					if(i == mensagens.length - 1) {
+						notifica += '.'}
+					else {
+					notifica += ';\n';
+					
+					}
+				}
+				alert(notifica);
+			
+		}
 		
 		}
 	</script>
@@ -20,7 +42,7 @@
 	</title>
 </head>
 <body>
-	<form action="#" method="post" id="formularioCadastro" onsubmit="#">
+	<form action="#" method="post" id="formularioCadastro" onsubmit="validaCampos(event)">
 		<label for="nome">Nome do Cliente:</label>
 		<input name="nome" id="nome" type="text"><br/>
 		<label for="cpf">CPF:</label>
